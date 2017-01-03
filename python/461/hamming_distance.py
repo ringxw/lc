@@ -12,10 +12,8 @@ class Solution(object):
 
         """
         # Convert the int to binary in string format, then compare them bit by bit
-        # {0} is the standard format method format, things after : is the formatting
-        # 032 means zero-padd up to 32 digits to the left, b means convert to binary
-        binary_x = '{0:032b}'.format(x)
-        binary_y = '{0:032b}'.format(y)
+        binary_x = bin(x)[2:].zfill(32) 
+        binary_y = bin(y)[2:].zfill(32)
         print binary_x
         print binary_y
         
