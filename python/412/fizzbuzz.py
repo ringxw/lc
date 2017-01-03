@@ -18,4 +18,4 @@ class Solution(object):
                 val = str(i)
             ret_list.append(val)
 
-	    return ret_list
+        return ret_list
