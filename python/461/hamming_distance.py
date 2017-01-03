@@ -2,7 +2,6 @@
 class Solution(object):
 
     def hammingDistance(self, x, y):
-
         """
 
         :type x: int
@@ -12,6 +11,7 @@ class Solution(object):
         :rtype: int
 
         """
+        # Convert the int to binary in string format, then compare them bit by bit
         # {0} is the standard format method format, things after : is the formatting
         # 032 means zero-padd up to 32 digits to the left, b means convert to binary
         binary_x = '{0:032b}'.format(x)
@@ -19,7 +19,7 @@ class Solution(object):
         print binary_x
         print binary_y
         
-        return sum(bit_in_x != bit_in_y for bit_in_x, bit_in_y in zip(binary_x, binary_y))
+        return sum( bit_in_x != bit_in_y for bit_in_x, bit_in_y in zip(binary_x, binary_y))
 
 solution = Solution()
 print solution.hammingDistance(2121212121,5)
